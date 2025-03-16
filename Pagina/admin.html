@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM - My Delights</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="crm.js"></script>
+</head>
+<body>
+    <header>
+        <h1>CRM - My Delights</h1>
+        <button onclick="logout()">Cerrar sesion</button>
+    </header>
+    
+    <main>
+        <div id="adminContent" class="admin-only">
+            <h2>Panel de Administracion</h2>
+            <p>Gestion de pedidos, productos y clientes</p>
+            <button onclick="gestionarPedidos()">Ver pedidos</button>
+            <button onclick="gestionarProductos()">Ver productos</button>
+        </div>
+
+        <div id="clientContent" class="client-only">
+            <h2>Bienvenido Cliente</h2>
+            <p>Aqui puedes ver tus pedidos y modificar tu información</p>
+            <button onclick="verMisPedidos()">Mis pedidos</button>
+            <button onclick="editarPerfil()">Editar perfil</button>
+        </div>
+
+        <section id="cotizar">
+            <h2>Solicita una Cotizacion</h2>
+            <form id="cotizacionForm">
+                <label for="tipoServicio">Tipo de servicio:</label>
+                <select id="tipoServicio" name="tipoServicio" required>
+                    <option value="buffet">Buffet</option>
+                    <option value="banquete">Banquete</option>
+                    <option value="mesa">Mesa</option>
+                    <option value="salon">Salon</option>
+                </select><br><br>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required><br><br>
+
+                <label for="numeroPersonas">Numero de personas:</label>
+                <input type="number" id="numeroPersonas" name="numeroPersonas" required><br><br>
+
+                <label for="direccion">Direccion:</label>
+                <input type="text" id="direccion" name="direccion" required><br><br>
+
+                <button type="submit">Cotizar</button>
+            </form>
+
+            <div id="precioAproximado" style="display:none;">
+                <p>El precio aproximado es: <span id="precio"></span></p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
