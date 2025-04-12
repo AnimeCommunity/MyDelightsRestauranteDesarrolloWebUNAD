@@ -1,6 +1,6 @@
 <?php
-include 'includes/auth.php';
-include 'includes/db.php';
+include '../includes/auth.php';
+include '../includes/db.php';
 
 ?>
 
@@ -11,14 +11,15 @@ include 'includes/db.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRM - My Delights</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 
 <body>
     <header>
         <h1>CRM - My Delights</h1>
         <a href="logout.php"><button>Cerrar sesión</button></a>
-        <a href="index.php"><button>Tienda</button></a>
+        <a href="../index.php"><button>Tienda</button></a>
     </header>
 
     <main>
@@ -27,22 +28,22 @@ include 'includes/db.php';
 
                 <h2>Bienvenido Administrador</h2>
                 <p>Gestión de pedidos, productos y clientes</p>
-                <a href="admin/gestionar_reservas.php"><button>Gestionar reservas</button></a>
-                <a href="admin/gestionar_productos.php"><button>Gestionar productos</button></a>
-                <a href="admin/gestionar_menu.php"><button>Gestionar menus</button></a>
-                <a href="admin/gestionar_pedidos.php"><button>Gestionar pedidos</button></a>
+                <a href="../admin/gestionar_reservas.php"><button>Gestionar reservas</button></a>
+                <a href="../admin/gestionar_productos.php"><button>Gestionar productos</button></a>
+                <a href="../admin/gestionar_menu.php"><button>Gestionar menus</button></a>
+                <a href="../admin/gestionar_pedidos.php"><button>Gestionar pedidos</button></a>
             </div>
         <?php else: ?>
             <div id="clientContent" class="client-only">
                 <h2>Bienvenido Cliente</h2>
                 <p>Aquí puedes ver tus pedidos y modificar tu información</p>
-                <a href="mis_reservas.php"><button>Ver / Editar mis reservas</button></a>
-                <a href="perfil.php"><button>Editar perfil</button></a>
-                <a href="cliente.php"><button>Comprar</button></a>
-                <a href="historial.php"><button>Ver pedidos</button></a>
+                <a href="../productos/mis_reservas.php"><button>Ver / Editar mis reservas</button></a>
+                <a href="../user/perfil.php"><button>Editar perfil</button></a>
+                <a href="../productos/cliente.php"><button>Comprar</button></a>
+                <a href="../productos/historial.php"><button>Ver pedidos</button></a>
 
                 <h3>Haz una reserva</h3>
-                <form method="POST" action="reservar.php" id="reservaForm" onsubmit="return validarYEnviar()">
+                <form method="POST" action="../productos/reservar.php" id="reservaForm" onsubmit="return validarYEnviar()">
                     <input type="text" name="nombre" placeholder="Nombre" required><br><br>
                     <input type="date" name="fecha" required><br><br>
                     <input type="number" name="personas" placeholder="Personas" id="personas" required><br><br>

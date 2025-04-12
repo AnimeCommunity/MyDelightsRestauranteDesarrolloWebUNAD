@@ -40,10 +40,11 @@ if (isset($_GET['eliminar'])) {
     <meta charset="UTF-8">
     <title>Gestionar Pedidos</title>
     <link rel="stylesheet" href="../css/productos.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 <body>
     <h2>Lista de Pedidos</h2>
-    <a href="../dashboard.php"><button>Regresar</button></a>
+    <a href="../login/dashboard.php"><button>Regresar</button></a>
     <table>
         <thead>
             <tr>

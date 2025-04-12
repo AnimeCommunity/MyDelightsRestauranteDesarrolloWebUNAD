@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'includes/db.php';
+include '../includes/db.php';
 
 
 if (!isset($_SESSION['carrito'])) {
@@ -123,17 +123,15 @@ if (isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <title>Vista Cliente</title>
-    <link rel="stylesheet" href="css/perfil.css">
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 
 <body>
     <h1>¡Bienvenido! Compra tus productos o menús favoritos 🍽️</h1>
 
     <h2>🍴 Menús</h2>
-    <a href="dashboard.php">← Volver al panel</a>
+    <a href="../login/dashboard.php">← Volver al panel</a>
     <br>
     <a href="historial.php"><button>ver pedidos</button></a>
     <div class="productos">
@@ -142,7 +140,7 @@ if (isset($_SESSION['user_id'])) {
                 <h3><?= htmlspecialchars($menu['nombre']) ?> (<?= htmlspecialchars($menu['tipo']) ?>)</h3>
                 <p><?= htmlspecialchars($menu['descripcion']) ?></p>
                 <?php if (!empty($menu['imagen'])): ?>
-                    <img src="img/<?= htmlspecialchars($menu['imagen']) ?>" alt="Imagen del menú">
+                    <img src="../img/<?= htmlspecialchars($menu['imagen']) ?>" alt="Imagen del menú">
                 <?php endif; ?>
                 <p><strong>Precio:</strong> $<?= number_format($menu['precio'], 0, ',', '.') ?></p>
                 <form method="POST">
@@ -163,7 +161,7 @@ if (isset($_SESSION['user_id'])) {
                 <h3><?= htmlspecialchars($producto['nombre']) ?></h3>
                 <p><?= htmlspecialchars($producto['descripcion']) ?></p>
                 <?php if (!empty($producto['imagen'])): ?>
-                    <img src="img/<?= htmlspecialchars($producto['imagen']) ?>" alt="Imagen del producto">
+                    <img src="../img/<?= htmlspecialchars($producto['imagen']) ?>" alt="Imagen del producto">
                 <?php endif; ?>
                 <p><strong>Precio:</strong> $<?= number_format($producto['precio'], 0, ',', '.') ?></p>
                 <form method="POST">

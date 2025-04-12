@@ -33,10 +33,10 @@ $productos = $conn->query("SELECT * FROM productos")->fetch_all(MYSQLI_ASSOC);
             <li><a href="#nosotros">Nosotros</a></li>
             <li><a href="#menu">Menú</a></li>
             <?php if ($loggedIn): ?>
-                <li><a href="logout.php">Cerrar sesión</a></li>
-                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="./login/logout.php">Cerrar sesión</a></li>
+                <li><a href="./login/dashboard.php">Dashboard</a></li>
             <?php else: ?>
-                <li><a href="login.php">Acceder</a></li>
+                <li><a href="login/login.php">Acceder</a></li>
             <?php endif; ?>
         </ul>
     </nav>

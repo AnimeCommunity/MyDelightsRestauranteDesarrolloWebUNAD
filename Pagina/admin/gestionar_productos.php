@@ -76,12 +76,13 @@ $result = $conn->query("SELECT * FROM productos");
     <meta charset="UTF-8">
     <title>Gestión de Productos</title>
     <link rel="stylesheet" href="../css/productos.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 <body>
 
 <h1>Gestión de Productos</h1>
 
-<a href="../dashboard.php"><button>Regresar</button></a>
+<a href="../login/dashboard.php"><button>Regresar</button></a>
 
 <ul>
 <?php while ($producto = $result->fetch_assoc()): ?>

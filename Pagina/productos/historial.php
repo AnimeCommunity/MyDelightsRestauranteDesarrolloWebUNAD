@@ -1,5 +1,5 @@
 <?php
-include("includes/db.php");
+include("../includes/db.php");
 
 
 session_start();
@@ -45,12 +45,13 @@ if (isset($_GET['eliminar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de Pedidos</title>
-    <link rel="stylesheet" href="css/historial.css">
+    <link rel="stylesheet" href="../css/historial.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 <body>
 
 <h1>Historial de Pedidos</h1>
-<a class="volver-btn" href="dashboard.php">Volver</a>
+<a class="volver-btn" href="../login/dashboard.php">Volver</a>
 <?php if ($result->num_rows > 0): ?>
     <table border="1">
         <thead>

@@ -1,6 +1,6 @@
 <?php
-include 'includes/auth.php';
-include 'includes/db.php';
+include '../includes/auth.php';
+include '../includes/db.php';
 
 $usuario_id = $_SESSION['user_id'];
 
@@ -51,7 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Mi Perfil</title>
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 <body>
 
@@ -81,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Guardar</button>
     </form>
 
-    <a href="dashboard.php">← Volver al panel</a>
+    <a href="../login/dashboard.php">← Volver al panel</a>
 </div>
 
 </body>

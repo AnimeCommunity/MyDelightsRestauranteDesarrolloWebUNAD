@@ -1,5 +1,5 @@
 <?php
-include 'includes/db.php';
+include '../includes/db.php';
 session_start();
 
 $error = '';
@@ -29,10 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - My Delights</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 <body>
-    <a href="index.php"><button>volver a la pagina anterior</button></a>
+    <a href="../index.php"><button>volver a la pagina anterior</button></a>
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
 

@@ -1,6 +1,6 @@
 <?php
-include 'includes/auth.php';
-include 'includes/db.php';
+include '../includes/auth.php';
+include '../includes/db.php';
 
 $usuario_id = $_SESSION['user_id'];
 
@@ -37,17 +37,15 @@ $result = $conn->query("SELECT * FROM reservas WHERE usuario_id = $usuario_id");
 <head>
     <meta charset="UTF-8">
     <title>Mis Reservas</title>
-    <link rel="stylesheet" href="css/misreservas.css">
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="../css/misreservas.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 
 <body>
 
     <h1>Mis Reservas</h1>
 
-    <a href="dashboard.php"><button>Regresar</button></a>
+    <a href="../login/dashboard.php"><button>Regresar</button></a>
 
     <?php while ($reserva = $result->fetch_assoc()): ?>
         <div class="reserva">

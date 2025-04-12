@@ -72,15 +72,13 @@ if (isset($_POST['agregar'])) {
     <meta charset="UTF-8">
     <title>Gestión de Reservas</title>
     <link rel="stylesheet" href="../css/greservas.css">
-    <style>
-
-    </style>
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 
 <body>
 
     <h1>Gestión de Reservas</h1>
-    <a href="../dashboard.php"><button>Regresar</button></a>
+    <a href="../login/dashboard.php"><button>Regresar</button></a>
     <ul>
         <?php
         $result = $conn->query("SELECT r.*, u.usuario AS username FROM reservas r JOIN usuarios u ON r.usuario_id = u.id");

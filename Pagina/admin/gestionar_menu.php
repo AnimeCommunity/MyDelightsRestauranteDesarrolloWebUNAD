@@ -78,12 +78,13 @@ while ($p = $productos->fetch_assoc()) {
     <meta charset="UTF-8">
     <title>Gestión de Menús</title>
     <link rel="stylesheet" href="../css/productos.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
 
 </head>
 <body>
 
 <h1>Gestión de Menús</h1>
-<a href="../dashboard.php"><button>Regresar</button></a>
+<a href="../login/dashboard.php"><button>Regresar</button></a>
 
 <h2>Crear Nuevo Menú</h2>
 <form method="POST" enctype="multipart/form-data">
