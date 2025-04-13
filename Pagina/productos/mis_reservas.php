@@ -22,7 +22,7 @@ if (isset($_POST['editar'])) {
     $tipo = $_POST['tipo'];
 
     $stmt = $conn->prepare("UPDATE reservas SET nombre=?, fecha=?, personas=?, tipo=?, precio=? WHERE id=? AND usuario_id=?");
-    $stmt->bind_param("ssissi", $nombre, $fecha, $personas, $tipo, $precio, $id, $usuario_id);
+    $stmt->bind_param("ssisdii", $nombre, $fecha, $personas, $tipo, $precio, $id, $usuario_id);
     $stmt->execute();
     header("Location: mis_reservas.php");
     exit();

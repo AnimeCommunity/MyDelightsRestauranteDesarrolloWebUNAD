@@ -37,6 +37,9 @@ if (isset($_GET['eliminar'])) {
     header("Location: historial.php"); 
     exit();
 }
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -79,6 +82,7 @@ if (isset($_GET['eliminar'])) {
                     </td>
                 </tr>
             <?php endwhile; ?>
+
         </tbody>
     </table>
 <?php else: ?>

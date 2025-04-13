@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" id="username" name="username" required>
             
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" minlength="8" required>
 
             <label for="email">Correo:</label>
             <input type="email" id="email" name="email" required>

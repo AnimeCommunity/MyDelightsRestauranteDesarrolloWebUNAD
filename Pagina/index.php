@@ -17,7 +17,7 @@ $productos = $conn->query("SELECT * FROM productos")->fetch_all(MYSQLI_ASSOC);
     <title>My Delights - Restaurante</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script defer src="js/script.js"></script>
+    <script defer src="assets/js/script.js"></script>
     <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
