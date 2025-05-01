@@ -19,6 +19,23 @@ $productos = $conn->query("SELECT * FROM productos")->fetch_all(MYSQLI_ASSOC);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script defer src="assets/js/script.js"></script>
     <link rel="icon" href="img/favicon.png" type="image/png">
+    <meta name= "description" content= "Restaurante en Bogotá con comida gourmet, 
+    ambiente acogedor y excelente servicio. Disfruta platos típicos colombianos,
+    en My Delights, menús internacionales y opciones vegetarianas. 
+    ¡Reserva ahora y vive una  experiencia gastronómica única en el 
+    corazón de Bogotá!">
+
+    <!--  analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VY35XENL2B"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VY35XENL2B');
+    </script>
+
+
+
 </head>
 <body>
 
@@ -27,7 +44,7 @@ $productos = $conn->query("SELECT * FROM productos")->fetch_all(MYSQLI_ASSOC);
     <div class="logo">
         <a href="#inicio"><img src="img/logo.png" alt="My Delights"></a>
     </div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Botón para abrir el menú -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Btn para abrir el menu -->
     <ul class="menu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#destacados">Destacados</a></li>
@@ -58,6 +75,8 @@ $productos = $conn->query("SELECT * FROM productos")->fetch_all(MYSQLI_ASSOC);
     <p>Bienvenido a My Delights, un restaurante con la mejor selección de platillos gourmet...</p>
 </section>
 
+
+
 <section id="menu">
     <h2>Nuestro Menú</h2>
 
@@ -85,6 +104,11 @@ $productos = $conn->query("SELECT * FROM productos")->fetch_all(MYSQLI_ASSOC);
 </div>
 
 <?php endforeach; ?>
+
+<section id="tip-del-dia" class="tip-dia">
+    <h2>Tip de la semana</h2>
+    <p>"Agrega una rodaja de limón a tus platos de mariscos para realzar el sabor sin opacarlo. ¡Un toque cítrico marca la diferencia!"</p>
+</section>  
 
 </section>
 <section id="servicios">
