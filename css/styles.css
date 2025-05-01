@@ -413,3 +413,151 @@ button:hover {
     font-weight: bold;
 }
 
+.menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-right: 0;
+    }
+
+    .carousel-container {
+        margin-top: 60px; /* Ajustar margen para dispositivos más pequeños */
+    }
+
+    .platos,
+    .comida-corriente {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .plato,
+    .comida-corriente .plato {
+        width: 100%;
+    }
+
+    .btn-wsp {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #servicios .servicio {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: #2c3e50;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .menu li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .menu li a:hover {
+        text-decoration: underline;
+    }
+
+    .menu.open {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    nav ul {
+        font-size: 14px;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 20px;
+    }
+
+    .login-container button {
+        font-size: 16px;
+    }
+
+    #cotizar h2 {
+        font-size: 20px;
+    }
+
+    #servicios h2 {
+        font-size: 1.5rem;
+    }
+
+    .servicio h3 {
+        font-size: 1.2rem;
+    }
+
+    .servicio p {
+        font-size: 0.9rem;
+    }
+}

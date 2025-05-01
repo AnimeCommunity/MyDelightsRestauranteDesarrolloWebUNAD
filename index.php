@@ -27,19 +27,20 @@ $productos = $conn->query("SELECT * FROM productos")->fetch_all(MYSQLI_ASSOC);
     <div class="logo">
         <a href="#inicio"><img src="img/logo.png" alt="My Delights"></a>
     </div>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#destacados">Destacados</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#menu">Menú</a></li>
-            <?php if ($loggedIn): ?>
-                <li><a href="./login/logout.php">Cerrar sesión</a></li>
-                <li><a href="./login/dashboard.php">Dashboard</a></li>
-            <?php else: ?>
-                <li><a href="login/login.php">Acceder</a></li>
-            <?php endif; ?>
-        </ul>
-    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Botón para abrir el menú -->
+    <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#destacados">Destacados</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <?php if ($loggedIn): ?>
+            <li><a href="./login/logout.php">Cerrar sesión</a></li>
+            <li><a href="./login/dashboard.php">Dashboard</a></li>
+        <?php else: ?>
+            <li><a href="login/login.php">Acceder</a></li>
+        <?php endif; ?>
+    </ul>
+</nav>
 
 <section id="destacados" class="carousel-container">
     <div class="carousel">

@@ -13,7 +13,10 @@ function moverSlide(n) {
 
 setInterval(() => moverSlide(1), 5000); 
 
-
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('open');
+}
 
 function mostrarInfo(platoId) {
 
