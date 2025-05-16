@@ -17,6 +17,11 @@ if (isset($_POST['editar'])) {
     $id = intval($_POST['reserva_id']);
     $nombre = $_POST['nombre'];
     $fecha = $_POST['fecha'];
+    $fecha_actual = date("Y-m-d");
+    if ($fecha < $fecha_actual) {
+        echo "<script>alert('No puedes poner una fecha pasada.'); window.location.href='mis_reservas.php';</script>";
+        exit();
+    }
     $personas = $_POST['personas'];
     $precio = $_POST['precio'];
     $tipo = $_POST['tipo'];
@@ -79,7 +84,8 @@ $result = $conn->query("SELECT * FROM reservas WHERE usuario_id = $usuario_id");
             <input type="text" name="nombre" id="editar_nombre" required>
 
             <label>Fecha:</label>
-            <input type="date" name="fecha" id="editar_fecha" required>
+            <input type="date" name="fecha" id="editar_fecha" min="<?= date('Y-m-d') ?>" required>
+
 
             <label>Personas:</label>
             <input type="number" name="personas" id="editar_personas" required>

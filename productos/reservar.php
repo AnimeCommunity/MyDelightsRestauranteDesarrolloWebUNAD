@@ -17,6 +17,17 @@ include '../includes/db.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombre = $_POST['nombre'];
     $fecha = $_POST['fecha'];
+    $fecha_actual = date("Y-m-d");
+
+    // Validar que la fecha no sea anterior a la actual
+    if ($fecha < $fecha_actual) {
+        echo "<div class='mensaje error'>
+                <h2>❌ Fecha inválida</h2>
+                <p>No puedes reservar una fecha pasada.</p>
+                <a class='boton-volver' href='../login/dashboard.php'>Volver al panel</a>
+            </div>";
+        exit();
+    }
     $personas = $_POST['personas'];
     $tipo = $_POST['tipo'];
     $precio = $_POST['precio'];

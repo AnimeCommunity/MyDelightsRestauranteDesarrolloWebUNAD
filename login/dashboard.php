@@ -45,7 +45,7 @@ include '../includes/db.php';
                 <h3>Haz una reserva</h3>
                 <form method="POST" action="../productos/reservar.php" id="reservaForm" onsubmit="return validarYEnviar()">
                     <input type="text" name="nombre" placeholder="Nombre" required><br><br>
-                    <input type="date" name="fecha" required><br><br>
+                    <input type="date" name="fecha" min="<?= date('Y-m-d') ?>" required>
                     <input type="number" name="personas" placeholder="Personas" id="personas" required><br><br>
 
                     <label for="tipo">Tipo de Reserva:</label><br>

@@ -1,0 +1,61 @@
+tree /F > estructura.txt
+
+C:.
+¦   estructura.txt
+¦   index.php
+¦   
++---admin
+¦       gestionar_menu.php
+¦       gestionar_pedidos.php
+¦       gestionar_productos.php
+¦       gestionar_reservas.php
+¦       
++---assets
+¦   +---js
+¦           script.js
+¦           
++---css
+¦       greservas.css
+¦       historial.css
+¦       misreservas.css
+¦       perfil.css
+¦       productos.css
+¦       reservas.css
+¦       styles.css
+¦       
++---database
+¦       restaurante.sql
+¦       
++---Documentación
+¦   ¦   Etapa3_ComponentePracticoPracticasSimuladas_DanielSantiagoPinedaGarnica.pdf
+¦   ¦   
+¦   +---Prototipos
+¦           Captura de pantalla 2025-03-12 190618.png
+¦           ...
+¦           restaurante.epgz
+¦           
++---img
+¦       1.png
+¦       ...
+¦       
++---includes
+¦       auth.php
+¦       db.php
+¦       header.php
+¦       
++---login
+¦       dashboard.php
+¦       login.php
+¦       logout.php
+¦       register.php
+¦       
++---productos
+¦       cliente.php
+¦       historial.php
+¦       mis_reservas.php
+¦       reservar.php
+¦       
++---sustentacion
++---user
+        perfil.php
+        
